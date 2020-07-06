@@ -12,7 +12,7 @@ const handleDecorator = (cacheTTL, target, propertyKey, descriptor) => {
       cache.set(hash, result, cacheTTL);
       return result;
     };
-    const hash = ObjectHash({ method: propertyKey, args: [...arguments] });
+    const hash = ObjectHash({ method: propertyKey + target.constructor.name, args: [...arguments] });
     let data = cache.get(hash);
     if (data === undefined) {
       data = getValueAndAddToCache();
