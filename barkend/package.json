@@ -1,0 +1,25 @@
+{
+  "name": "barkend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^14.0.14",
+    "apollo-server-express": "^2.15.1",
+    "axios": "^0.19.2",
+    "graphql": "^15.3.0",
+    "node-cache": "^5.1.2",
+    "object-hash": "^2.0.3",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.6"
+  }
+}
