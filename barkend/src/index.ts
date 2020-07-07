@@ -2,6 +2,8 @@ import "reflect-metadata";
 import { ZhiHu } from "./zhihu";
 import { MeiPin } from "./meipin";
 import { V2EX } from "./v2ex";
+import { ChouTi24H, ChouTi3D, ChouTi1W } from "./chouti";
+import { JianDanNew } from "./jiandan";
 
 const express = require('express');
 const { ApolloServer, gql } = require('apollo-server-express');
@@ -44,7 +46,11 @@ const typeDefs = gql`
 const sites = {
   '知乎': new ZhiHu(),
   '没品': new MeiPin(),
-  'V2EX': new V2EX()
+  'V2EX': new V2EX(),
+  '抽屉24小时': new ChouTi24H(),
+  '抽屉3天': new ChouTi3D(),
+  '抽屉一周': new ChouTi1W(),
+  '煎蛋文章': new JianDanNew(),
 };
 
 const resolvers = {
