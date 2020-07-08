@@ -6,6 +6,7 @@ import { ChouTi24H, ChouTi3D, ChouTi1W } from "./chouti";
 import { JianDanNew } from "./jiandan";
 import { WeiBo } from "./weibo";
 import { BaiDu, BaiDuDay, BaiDu7Day } from "./baidu";
+import { Kr, KrHOT } from "./36kr";
 
 const express = require('express');
 const { ApolloServer, gql } = require('apollo-server-express');
@@ -57,6 +58,8 @@ const sites = {
   '百度实时热点': new BaiDu(),
   '百度今日热点': new BaiDuDay(),
   '百度七日热点': new BaiDu7Day(),
+  '36氪综合榜': new Kr(),
+  '36氪人气榜': new KrHOT(),
 };
 
 const resolvers = {
