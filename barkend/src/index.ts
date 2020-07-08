@@ -4,6 +4,8 @@ import { MeiPin } from "./meipin";
 import { V2EX } from "./v2ex";
 import { ChouTi24H, ChouTi3D, ChouTi1W } from "./chouti";
 import { JianDanNew } from "./jiandan";
+import { WeiBo } from "./weibo";
+import { BaiDu, BaiDuDay, BaiDu7Day } from "./baidu";
 
 const express = require('express');
 const { ApolloServer, gql } = require('apollo-server-express');
@@ -51,6 +53,10 @@ const sites = {
   '抽屉3天': new ChouTi3D(),
   '抽屉一周': new ChouTi1W(),
   '煎蛋文章': new JianDanNew(),
+  '微博热搜': new WeiBo(),
+  '百度实时热点': new BaiDu(),
+  '百度今日热点': new BaiDuDay(),
+  '百度七日热点': new BaiDu7Day(),
 };
 
 const resolvers = {
