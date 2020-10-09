@@ -7,6 +7,7 @@ import { JianDanNew } from "./jiandan";
 import { WeiBo } from "./weibo";
 import { BaiDu, BaiDuDay, BaiDu7Day } from "./baidu";
 import { Kr, KrHOT } from "./36kr";
+import { HuPu } from "./hupu";
 
 const express = require('express');
 const { ApolloServer, gql } = require('apollo-server-express');
@@ -60,6 +61,7 @@ const sites = {
   '百度七日热点': new BaiDu7Day(),
   '36氪综合榜': new Kr(),
   '36氪人气榜': new KrHOT(),
+  '虎扑步行街': new HuPu(),
 };
 
 const resolvers = {
